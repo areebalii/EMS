@@ -11,6 +11,7 @@ function App() {
 
   const [user, setUser] = useState(null)
   const [loggedInUserData, setLoggedInUserData] = useState(null)
+  // eslint-disable-next-line no-unused-vars
   const [userData, setUserData] = useContext(AuthContext)
 
   // useEffect(() => {
