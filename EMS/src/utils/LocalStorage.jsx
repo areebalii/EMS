@@ -1,249 +1,223 @@
 const employees = [
-  {
-    id: "emp001",
-    email: "emp1@example.com",
-    pass: "123",
-    tasks: [
-      {
-        active: true,
-        newTask: true,
-        completed: false,
-        failed: false,
-        title: "Submit Report",
-        description: "Submit the financial report for Q1.",
-        date: "2025-05-23",
-        category: "Finance"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        title: "Update Profile",
-        description: "Update personal and emergency contact details.",
-        date: "2025-04-15",
-        category: "HR"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: false,
-        failed: true,
-        title: "Client Call",
-        description: "Call the client for project feedback.",
-        date: "2025-05-10",
-        category: "Client"
-      }
-    ]
-  },
-  {
-    id: "emp002",
-    email: "emp2@example.com",
-    pass: "123",
-    tasks: [
-      {
-        active: true,
-        newTask: true,
-        completed: false,
-        failed: false,
-        title: "Design Logo",
-        description: "Create a logo for the new product line.",
-        date: "2025-05-25",
-        category: "Design"
-      },
-      {
-        active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-        title: "Team Meeting",
-        description: "Discuss project progress with the team.",
-        date: "2025-05-22",
-        category: "Management"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        title: "Presentation Review",
-        description: "Review the slides for upcoming presentation.",
-        date: "2025-05-10",
-        category: "Communication"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: false,
-        failed: true,
-        title: "Bug Fix",
-        description: "Resolve critical bugs from release v1.2.",
-        date: "2025-04-29",
-        category: "Development"
-      }
-    ]
-  },
-  {
-    id: "emp003",
-    email: "emp3@example.com",
-    pass: "123",
-    tasks: [
-      {
-        active: true,
-        newTask: true,
-        completed: false,
-        failed: false,
-        title: "Update Docs",
-        description: "Update API documentation for developers.",
-        date: "2025-05-26",
-        category: "Documentation"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        title: "Database Backup",
-        description: "Perform full backup of the database.",
-        date: "2025-05-01",
-        category: "IT"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        title: "Security Patch",
-        description: "Install security patch 2025.05.01.",
-        date: "2025-05-03",
-        category: "Security"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: false,
-        failed: true,
-        title: "Code Review",
-        description: "Review teammate's pull request.",
-        date: "2025-04-20",
-        category: "Development"
-      },
-      {
-        active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-        title: "Unit Testing",
-        description: "Write tests for login module.",
-        date: "2025-05-22",
-        category: "QA"
-      }
-    ]
-  },
-  {
-    id: "emp004",
-    email: "emp4@example.com",
-    pass: "123",
-    tasks: [
-      {
-        active: true,
-        newTask: true,
-        completed: false,
-        failed: false,
-        title: "Policy Review",
-        description: "Review new employee policies for 2025.",
-        date: "2025-05-28",
-        category: "HR"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        title: "Training Session",
-        description: "Complete the annual compliance training.",
-        date: "2025-05-05",
-        category: "Training"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        title: "Interview Candidate",
-        description: "Interview candidate for backend developer role.",
-        date: "2025-05-14",
-        category: "Recruitment"
-      }
-    ]
-  },
-  {
-    id: "emp005",
-    email: "emp5@example.com",
-    pass: "123",
-    tasks: [
-      {
-        active: true,
-        newTask: true,
-        completed: false,
-        failed: false,
-        title: "Performance Review",
-        description: "Prepare monthly performance review.",
-        date: "2025-05-27",
-        category: "HR"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-        title: "Submit Reimbursement",
-        description: "Submit travel reimbursement for April.",
-        date: "2025-05-03",
-        category: "Finance"
-      },
-      {
-        active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-        title: "Website Audit",
-        description: "Audit the new website UI/UX.",
-        date: "2025-05-22",
-        category: "Design"
-      },
-      {
-        active: false,
-        newTask: false,
-        completed: false,
-        failed: true,
-        title: "Team Feedback",
-        description: "Collect feedback from teammates on new workflow.",
-        date: "2025-05-10",
-        category: "Management"
-      }
-    ]
-  }
+    {
+        "id": 1,
+        "firstName": "Arjun",
+        "email": "e@e.com",
+        "password": "123",
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
+        "tasks": [
+            {
+                "active": true,
+                "newTask": true,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Update website",
+                "taskDescription": "Revamp the homepage design",
+                "taskDate": "2024-10-12",
+                "category": "Design" 
+            },
+            {
+                "active": false,
+                "newTask": false,
+                "completed": true,
+                "failed": false,
+                "taskTitle": "Client meeting",
+                "taskDescription": "Discuss project requirements",
+                "taskDate": "2024-10-10",
+                "category": "Meeting"
+            },
+            {
+                "active": true,
+                "newTask": false,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Fix bugs",
+                "taskDescription": "Resolve bugs reported in issue tracker",
+                "taskDate": "2024-10-14",
+                "category": "Development"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "firstName": "Sneha",
+        "email": "employee2@example.com",
+        "password": "123",
+        "taskCounts": {
+            "active": 1,
+            "newTask": 0,
+            "completed": 1,
+            "failed": 0
+        },
+        "tasks": [
+            {
+                "active": true,
+                "newTask": false,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Database optimization",
+                "taskDescription": "Optimize queries for better performance",
+                "taskDate": "2024-10-11",
+                "category": "Database"
+            },
+            {
+                "active": false,
+                "newTask": false,
+                "completed": true,
+                "failed": false,
+                "taskTitle": "Design new feature",
+                "taskDescription": "Create mockups for the new feature",
+                "taskDate": "2024-10-09",
+                "category": "Design"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "firstName": "Ravi",
+        "email": "employee3@example.com",
+        "password": "123",
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
+        "tasks": [
+            {
+                "active": true,
+                "newTask": true,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Prepare presentation",
+                "taskDescription": "Prepare slides for upcoming client presentation",
+                "taskDate": "2024-10-13",
+                "category": "Presentation"
+            },
+            {
+                "active": true,
+                "newTask": false,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Code review",
+                "taskDescription": "Review the codebase for optimization",
+                "taskDate": "2024-10-12",
+                "category": "Development"
+            },
+            {
+                "active": false,
+                "newTask": false,
+                "completed": true,
+                "failed": false,
+                "taskTitle": "Testing",
+                "taskDescription": "Test the latest build for bugs",
+                "taskDate": "2024-10-08",
+                "category": "QA"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "firstName": "Priya",
+        "email": "employee4@example.com",
+        "password": "123",
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 0,
+            "failed": 0
+        },
+        "tasks": [
+            {
+                "active": true,
+                "newTask": true,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Write documentation",
+                "taskDescription": "Update the project documentation",
+                "taskDate": "2024-10-13",
+                "category": "Documentation"
+            },
+            {
+                "active": true,
+                "newTask": false,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Set up CI/CD",
+                "taskDescription": "Implement continuous integration pipeline",
+                "taskDate": "2024-10-11",
+                "category": "DevOps"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "firstName": "Karan",
+        "email": "employee5@example.com",
+        "password": "123",
+        "taskCounts": {
+            "active": 2,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
+        "tasks": [
+            {
+                "active": true,
+                "newTask": true,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "UI redesign",
+                "taskDescription": "Redesign the user interface for better UX",
+                "taskDate": "2024-10-14",
+                "category": "Design"
+            },
+            {
+                "active": false,
+                "newTask": false,
+                "completed": true,
+                "failed": false,
+                "taskTitle": "Deploy new build",
+                "taskDescription": "Deploy the latest build to production",
+                "taskDate": "2024-10-09",
+                "category": "DevOps"
+            },
+            {
+                "active": true,
+                "newTask": false,
+                "completed": false,
+                "failed": false,
+                "taskTitle": "Client feedback",
+                "taskDescription": "Gather feedback from clients after product launch",
+                "taskDate": "2024-10-12",
+                "category": "Support"
+            }
+        ]
+    }
 ];
 
 
-  const admin = [
-    {
-      "id": "emp001",
-      "email": "emp1@example.com",
-      "pass": "123"
-    }
-  ]
+const admin = [{
+    "id": 1,
+    "email": "admin@example.com",
+    "password": "123"
+}];
 
-  export const SetLocalStorage = () => {
-    localStorage.setItem("employees", JSON.stringify(employees))
-    localStorage.setItem("admin", JSON.stringify(admin))
-  }
 
-  export const GetLocalStorage = () => {
-    const employees = JSON.parse(localStorage.getItem("employees"))
-    const admin = JSON.parse(localStorage.getItem("admin"))
-    
-    return {employees, admin}
-    
-  }
+export const SetLocalStorage = () => {
+  localStorage.setItem("employees", JSON.stringify(employees))
+  localStorage.setItem("admin", JSON.stringify(admin))
+}
+
+export const GetLocalStorage = () => {
+  const employees = JSON.parse(localStorage.getItem("employees"))
+  const admin = JSON.parse(localStorage.getItem("admin"))
+
+  return { employees, admin }
+
+}
