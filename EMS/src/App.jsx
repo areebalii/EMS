@@ -49,7 +49,6 @@ function App() {
     <>
       {!user ? <Login handleLogin={handleLogin} /> : ''}
       {user === 'admin' ? <AdminDashboard changeUser={setUser} /> : (user === 'employee' ? <EmployeeDashboard changeUser={setUser} data={loggedInUserData} /> : null)}
-      {console.log("loggedInUserData", loggedInUserData)
 }
     </>
   )

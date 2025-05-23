@@ -1,19 +1,17 @@
-import React from 'react'
-
-const FailedTask = () => {
+const FailedTask = ({data}) => {
   return (
         <div className="h-full w-[300px] bg-red-400 rounded-xl shadow-lg border-2 border-red-500 overflow-hidden">
       {/* Priority & Date Header */}
       <div className="flex justify-between items-center px-4 py-3 bg-red-500/20">
-        <span className="px-3 py-1 rounded-full text-xs font-bold bg-red-600 text-white uppercase tracking-wide">High</span>
-        <span className="text-sm font-medium text-white">Feb 20, 2025</span>
+        <span className="px-3 py-1 rounded-full text-xs font-bold bg-red-600 text-white uppercase tracking-wide">{data.category}</span>
+      <span className="text-sm font-medium text-white">{data.taskDate}</span>
       </div>
 
       {/* Task Content */}
       <div className="p-4">
-        <h2 className="text-xl font-bold text-white mb-2">Make a YouTube Video</h2>
+        <h2 className="text-xl font-bold text-white mb-2">{data.taskTitle}</h2>
         <p className="text-red-100 text-sm mb-4 line-clamp-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi incidunt, adipisci quos praesentium inventore nesciunt eveniet enim illo accusantium earum sequi.
+          {data.taskDescription}
         </p>
 
         {/* Action Buttons */}
