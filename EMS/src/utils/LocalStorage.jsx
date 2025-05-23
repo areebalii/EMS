@@ -1,7 +1,7 @@
 const employees = [
     {
         "id": 1,
-        "firstName": "Arjun",
+        "firstName": "Areeb",
         "email": "e@e.com",
         "password": "123",
         "taskCounts": {
@@ -20,6 +20,16 @@ const employees = [
                 "taskDescription": "Revamp the homepage design",
                 "taskDate": "2024-10-12",
                 "category": "Design" 
+            },
+            {
+                "active": true,
+                "newTask": false,
+                "completed": true,
+                "failed": false,
+                "taskTitle": "Edit the video",
+                "taskDescription": "Edit the video to make it more engaging",
+                "taskDate": "2024-10-12",
+                "category": "Editing" 
             },
             {
                 "active": false,
