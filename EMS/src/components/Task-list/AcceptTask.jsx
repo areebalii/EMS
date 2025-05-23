@@ -2,7 +2,7 @@ import React from 'react';
 
 const AcceptTask = () => {
   return (
-    <div className="h-full w-[300px] bg-red-400 rounded-xl shadow-lg border-2 border-red-500 overflow-hidden">
+    <div className="h-full w-[300px] bg-yellow-400 rounded-xl shadow-lg border-2 border-yellow-500 overflow-hidden">
       {/* Priority & Date Header */}
       <div className="flex justify-between items-center px-4 py-3 bg-red-500/20">
         <span className="px-3 py-1 rounded-full text-xs font-bold bg-red-600 text-white uppercase tracking-wide">High</span>
