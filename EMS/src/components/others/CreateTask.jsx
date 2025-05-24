@@ -4,28 +4,59 @@ import { AuthContext } from '../../context/AuthProvider'
 const CreateTask = () => {
 
     const [userData, setUserData] = useContext(AuthContext)
+
     const [taskTitle, setTaskTitle] = useState('')
     const [taskDescription, setTaskDescription] = useState('')
     const [taskDate, setTaskDate] = useState('')
     const [asignTo, setAsignTo] = useState('')
     const [category, setCategory] = useState('')
+
     const [newTask, setNewTask] = useState({})
 
     const submitHandler = (e) => {
         e.preventDefault()
 
-        setNewTask({ taskTitle, taskDescription, taskDate, category, active: false, newTask: true, failed: false, completed: false })
+        const task = {
+            taskTitle,
+            taskDescription,
+            taskDate,
+            category,
+            active: false,
+            newTask: true,
+            failed: false,
+            completed: false
+        }
 
-        const data = userData
-        
+        const updatedEmployees = userData.employees.map(emp => {
+            if (emp.firstName === asignTo) {
+                const updatedTasks = [...(emp.tasks || []), task]
+                const updatedTaskCounts = {
+                    ...emp.taskCounts,
+                    newTask: (emp.taskCounts?.newTask || 0) + 1,
+                }
 
+                return {
+                    ...emp,
+                    tasks: updatedTasks,
+                    taskCounts: updatedTaskCounts,
+                }
+            }
+            return emp
+        })
+
+        setUserData({
+            ...userData,
+            employees: updatedEmployees
+        })
+
+        // Reset the form
         setTaskTitle('')
-        setCategory('')
-        setAsignTo('')
-        setTaskDate('')
         setTaskDescription('')
-
+        setTaskDate('')
+        setAsignTo('')
+        setCategory('')
     }
+
 
     return (
         <div className='p-5 bg-[#1c1c1c] mt-5 rounded'>
