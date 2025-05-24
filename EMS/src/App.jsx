@@ -5,7 +5,7 @@ import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import AdminDashboard from './components/Dashboard/AdminDashboard';
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from './context/AuthProvider';
-import { SetLocalStorage } from './utils/LocalStorage';
+// import { SetLocalStorage } from './utils/LocalStorage';
 
 function App() {
 

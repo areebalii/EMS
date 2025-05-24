@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { AuthContext } from '../../context/AuthProvider'
 
 const CreateTask = () => {
@@ -11,7 +11,7 @@ const CreateTask = () => {
     const [asignTo, setAsignTo] = useState('')
     const [category, setCategory] = useState('')
 
-    const [newTask, setNewTask] = useState({})
+    // const [newTask, setNewTask] = useState({})
 
     const submitHandler = (e) => {
         e.preventDefault()
