@@ -32,10 +32,10 @@ const AllTasks = () => {
               <span className="inline-block bg-yellow-500 text-white text-sm px-3 py-1 rounded-full font-bold min-w-[28px]">{employee.taskCounts.newTask}</span>
             </div>
             <div className="text-center">
-              <span className="inline-block bg-green-500 text-white text-sm px-3 py-1 rounded-full font-bold min-w-[28px]">5</span>
+              <span className="inline-block bg-green-500 text-white text-sm px-3 py-1 rounded-full font-bold min-w-[28px]">{employee.taskCounts.completed}</span>
             </div>
             <div className="text-center">
-              <span className="inline-block bg-red-500 text-white text-sm px-3 py-1 rounded-full font-bold min-w-[28px]">1</span>
+              <span className="inline-block bg-red-500 text-white text-sm px-3 py-1 rounded-full font-bold min-w-[28px]">{employee.taskCounts.failed}</span>
             </div>
           </div>
         ))}
